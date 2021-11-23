@@ -1,0 +1,458 @@
+<!DOCTYPE html>
+
+<html class="no-js"> 
+	{% include "head.html" %}
+	{% load static %}
+
+<body id="body">
+
+<!--
+Start Preloader
+==================================== -->
+<div id="preloader">
+  <div class="preloader">
+    <div class="sk-circle1 sk-child"></div>
+    <div class="sk-circle2 sk-child"></div>
+    <div class="sk-circle3 sk-child"></div>
+    <div class="sk-circle4 sk-child"></div>
+    <div class="sk-circle5 sk-child"></div>
+    <div class="sk-circle6 sk-child"></div>
+    <div class="sk-circle7 sk-child"></div>
+    <div class="sk-circle8 sk-child"></div>
+    <div class="sk-circle9 sk-child"></div>
+    <div class="sk-circle10 sk-child"></div>
+    <div class="sk-circle11 sk-child"></div>
+    <div class="sk-circle12 sk-child"></div>
+  </div>
+</div> 
+<!--
+End Preloader
+==================================== -->
+
+
+  
+
+<!--
+Fixed Navigation
+==================================== -->
+<section class="header navigation fixed-top">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12">
+                <nav class="navbar navbar-expand-lg">
+                    <a class="navbar-brand" href="{% url 'index' %}">
+                        <!-- <img src="images/logo.png" alt="logo"> -->
+						<h3>NGOMANET</h3>
+                    </a>
+                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navigation" aria-controls="navigation"
+                        aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="tf-ion-android-menu"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navigation">
+                        <ul class="navbar-nav ml-auto">
+                            <!-- <li class="nav-item dropdown active">
+                                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true"
+                                    aria-expanded="false">
+                                    Home
+                                </a>
+                                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                    <a class="dropdown-item" href="index.html">Homepage 1</a>
+                                    <a class="dropdown-item" href="index-2.html">Homepage 2</a>
+                                </div>
+                            </li> -->
+                            <li class="nav-item">
+                                <a class="nav-link" href="about.html">Contact</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="service.html">Copyright</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="portfolio.html">SRA</a>
+                            </li>
+                            <!-- <li class="nav-item">
+                                <a class="nav-link" href="contact.html">C</a>
+                            </li> -->
+                           
+                        </ul>
+                    </div>
+                </nav>
+            </div>
+        </div>
+    </div>
+</section>
+
+ <!--
+Welcome Slider
+==================================== -->
+<section class="hero-area">
+	<div class="container">
+		<div class="row">
+			<div class="col-lg-6 mb-4 mb-lg-0">
+				<div class="video-player">
+					<img class="img-fluid rounded w-100" src="{% static 'images/slider/video-player-thumb.jpg' %}" alt="">
+					<a class="play-icon" href="javascript:void(0)">
+						<i class="tf-ion-play" data-video="https://www.youtube.com/embed/g3-VxLQO7do?autoplay=1"></i>
+					</a>
+				</div>
+			</div>
+			<div class="col-lg-6">
+				<div class="block">
+					<h4>Your number one youtube mp3 downloader</h4>
+					<p>Start typing a few characters on the search bar to get search suggestions. </p>
+					<ul class="list-inline wow fadeInUp" data-wow-duration=".5s" data-wow-delay=".7s">
+						<li class="list-inline-item">
+							<input type="text" placeholder="Enter your search item..." class="search-input">		
+						</li>
+						<li class="list-inline-item">
+							<a href="https://ngomanet.com/" target="_blank" class="btn btn-main">Search</a>		
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>	
+
+<!--
+Start About Section
+==================================== -->
+
+<section class="services section-xs" id="services">
+	<div class="container">
+		<div class="row">
+			<!-- Single Service Item -->
+			<div class="col-md-4 col-sm-6" >
+				<div class="service-block color-bg text-center">
+					<div class="service-icon text-center">
+						<i class="tf-ion-ios-copy-outline"></i>
+					</div>
+					<h3>WordPress Theme</h3>
+					<p>Lorem ipsum dolor sit amet, consectetur.. Sed id lorem eget orci dictum facilisis vel id tellus. Nullam iaculis arcu at mauris dapibus consectetur.</p>
+				</div>
+			</div>
+			<!-- End Single Service Item -->
+			
+			<!-- Single Service Item -->
+			<div class="col-md-4 col-sm-6" >
+				<div class="service-block text-center">
+					<div class="service-icon text-center">
+						<i class="tf-ion-ios-alarm-outline"></i>
+					</div>
+					<h3>Responsive Design</h3>
+					<p>Lorem ipsum dolor sit amet, consectetur.. Sed id lorem eget orci dictum facilisis vel id tellus. Nullam iaculis arcu at mauris dapibus consectetur.</p>
+				</div>
+			</div>
+			<!-- End Single Service Item -->
+			
+			<!-- Single Service Item -->
+			<div class="col-md-4 col-sm-6 mx-auto"  >
+				<div class="service-block color-bg text-center">
+					<div class="service-icon text-center">
+						<i class="tf-ion-ios-book-outline"></i>
+					</div>
+					<h3>Media & Advertisement</h3>
+					<p>Lorem ipsum dolor sit amet, consectetur.. Sed id lorem eget orci dictum facilisis vel id tellus. Nullam iaculis arcu at mauris dapibus consectetur.</p>
+				</div>
+			</div>
+		</div> 		<!-- End row -->
+	</div>   	<!-- End container -->
+</section>   <!-- End section -->
+
+<!-- Start Our Team
+=========================================== -->
+<section class="team section bg-gray" id="team">
+	<div class="container">
+		<div class="row">
+			<div class="col-12">
+				<div class="title text-center">
+					<h4>Contributors</h4>
+					<h2>Developers.</h2>
+					<span class="border"></span>
+					<p>Meet the brains behind the project</p>
+				</div>
+			</div>
+		</div>
+		<div class="row">
+		
+
+			<!-- team member -->
+			<div class="col-lg-3 col-sm-6">
+				<div class="team-member text-center">
+					<div class="member-photo">
+						<!-- member photo -->
+						<img class="img-fluid" src="{% static 'images/team/member-2.jpg' %}" alt="team people">
+						<!-- /member photo -->
+					</div>
+					<!-- member name & designation -->
+					<div class="member-content">
+						<h3>Luis Anthon</h3>
+						<span>Web Developer</span>
+						<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur necessitatibus ullam, culpa odio.</p>
+						<ul class="list-inline">
+							<li class="list-inline-item">
+								<a href="#">
+									<i class="tf-ion-social-facebook"></i>
+								</a>
+							</li>
+							<li class="list-inline-item">
+								<a href="#">
+									<i class="tf-ion-social-twitter"></i>
+								</a>
+							</li>
+							<li class="list-inline-item">
+								<a href="#">
+									<i class="tf-ion-social-google-outline"></i>
+								</a>
+							</li>
+							<li class="list-inline-item">
+								<a href="#">
+									<i class="tf-ion-social-dribbble"></i>
+								</a>
+							</li>
+						</ul>
+					</div>
+					<!-- /member name & designation -->
+				</div>
+			</div>
+			<!-- end team member -->
+
+			
+		</div>
+		<!-- End row -->
+	</div>
+	<!-- End container -->
+</section>
+<!-- End section -->
+
+
+
+		</div>
+		<!-- End row -->
+	</div>
+	<!-- End container -->
+</section>
+<!-- End section -->
+				
+
+<!-- Srart Contact Us
+		=========================================== -->		
+<section class="contact-us section bg-gray" id="contact">
+	<div class="container">
+		<div class="row">
+			<div class="col-12">
+				<div class="title text-center">
+					<h4>Drop us a note</h4>
+					<h2>Contact Us.</h2>
+					<span class="border"></span>
+					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illum reiciendis quasi itaque, obcaecati atque sit!</p>
+				</div>
+			</div>
+		</div>
+		<div class="row">
+			<!-- Contact Details -->
+			
+			<!-- / End Contact Details -->
+				
+			<!-- Contact Form -->
+			<div class="contact-form col-md-6 " >
+				<form id="contact-form" method="post" action="sendmail.php" role="form">
+				
+					<div class="form-group">
+						<input type="text" placeholder="Your Name" class="form-control" name="name" id="name">
+					</div>
+					
+					<div class="form-group">
+						<input type="email" placeholder="Your Email" class="form-control" name="email" id="email">
+					</div>
+					
+					<div class="form-group">
+						<input type="text" placeholder="Subject" class="form-control" name="subject" id="subject">
+					</div>
+					
+					<div class="form-group">
+						<textarea rows="6" placeholder="Message" class="form-control" name="message" id="message"></textarea>	
+					</div>
+					
+					<div id="success" class="success">
+						Thank you. The Mailman is on His Way :)
+					</div>
+					
+					<div id="error" class="error">
+						Sorry, don't know what happened. Try later :(
+					</div>
+					
+					<div id="cf-submit">
+						<input type="submit" id="contact-submit" class="btn btn-transparent" value="Submit">
+					</div>						
+					
+				</form>
+			</div>
+			<!-- ./End Contact Form -->
+		</div> <!-- end row -->
+		<div class="row">
+			<div class="col-md-4">
+				<div class="address-block contact-meta-block">
+					<i class="tf-ion-android-pin"></i>
+					<h4>Our Location</h4>
+					<p>
+						14/05, Stockhome <br>
+					Victori Palace , United States <br>
+					
+					</p>
+					
+				</div>
+			</div>
+			<div class="col-md-4">
+				<div class="phone-block contact-meta-block">
+					<i class="tf-ion-ios-telephone"></i>
+					<h4>Call Us</h4>
+					<p>
+						Office: (03) 9283 2617 <br>
+						Fax: +61 3827 3590
+					</p>
+				</div>
+			</div>
+			<div class="col-md-4">
+				<div class="social-icons-block contact-meta-block">
+					<i class="tf-ion-ios-contact"></i>
+					<h4>We are social</h4>
+					<ul class="list-inline social-icon">
+						<li class="list-inline-item"><a href=""><i class="tf-ion-social-facebook"></i></a></li>
+						<li class="list-inline-item"><a href=""><i class="tf-ion-social-twitter"></i></a></li>
+						<li class="list-inline-item"><a href=""><i class="tf-ion-social-linkedin"></i></a></li>
+						<li class="list-inline-item"><a href=""><i class="tf-ion-social-dribbble"></i></a></li>
+						<li class="list-inline-item"><a href=""><i class="tf-ion-social-instagram"></i></a></li>
+					</ul>
+				</div>
+			</div>
+		</div>
+		
+	</div> <!-- end container -->
+</section> <!-- end section -->
+
+<footer id="footer" class="bg-one">
+  <div class="top-footer">
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-6 mb-4 mb-lg-0 col-md-6">
+          <h3>About</h3>
+          <p>Integer posuere erat a ante venenati dapibus posuere velit aliquet. Fusce dapibus, tellus cursus commodo, tortor mauris sed posuere.</p>
+        </div>
+        
+
+        <div class="col-sm-6 mb-4 mb-lg-0 col-md-6">
+          <h3>Quick Links</h3>
+          <ul>
+            <li><a href="#">Partners</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">FAQ’s</a></li>
+            <li><a href="#">Badges</a></li>
+          </ul>
+        </div>
+       
+
+      </div>
+    </div> <!-- end container -->
+  </div>
+  <div class="footer-bottom">
+    <h5>Copyright 2021. All rights reserved.</h5>
+   
+  </div>
+</footer> <!-- end footer -->
+<!-- end Footer Area
+========================================== -->
+
+<!-- 
+Essential Scripts
+=====================================-->
+<!-- Main jQuery -->
+<script src="{% static 'plugins/jquery/jquery.min.js' %}"></script>
+<!-- Bootstrap 4 -->
+<script src="{% static 'plugins/bootstrap/bootstrap.min.js' %}"></script>
+<!-- Parallax -->
+<script src="{% static 'plugins/parallax/jquery.parallax-1.1.3.js' %}"></script>
+<!-- lightbox -->
+<script src="{% static 'plugins/lightbox2/dist/js/lightbox.min.js' %}"></script>
+<!-- Owl Carousel -->
+<script src="{% static 'plugins/slick-carousel/slick/slick.min.js' %}"></script>
+<!-- Portfolio Filtering -->
+<script src="{% static 'plugins/filterzr/jquery.filterizr.min.js' %}"></script>
+<!-- Smooth Scroll js -->
+<script src="{% static 'plugins/smooth-scroll/dist/js/smooth-scroll.min.js' %}"></script>
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBI14J_PNWVd-m0gnUBkjmhoQyNyd7nllA"></script>
+<!-- Form Validation -->
+<script src="{% static 'plugins/form-validation/jquery.form.js' %}"></script>
+<script src="{% static 'plugins/form-validation/jquery.validate.min.js' %}"></script>
+<!-- Custom js -->
+<script type="text/javascript" src="{% static 'plugins/revo-slider/js/jquery.themepunch.tools.min.js' %}"></script>
+<script type="text/javascript" src="{% static 'plugins/revo-slider/js/jquery.themepunch.revolution.min.js' %}"></script>
+<script src="{% static 'js/script.js' %}"></script>
+<!-- SLIDER REVOLUTION 5.0 EXTENSIONS  
+(Load Extensions only on Local File Systems ! 
+The following part can be removed on Server for On Demand Loading) -->
+<script type="text/javascript" src="{% static 'plugins/revo-slider/js/extensions/revolution.extension.actions.min.js' %}"></script>
+<script type="text/javascript" src="{% static 'plugins/revo-slider/js/extensions/revolution.extension.carousel.min.js' %}"></script>
+<script type="text/javascript" src="{% static 'plugins/revo-slider/js/extensions/revolution.extension.kenburn.min.js' %}"></script>
+<script type="text/javascript" src="{% static 'plugins/revo-slider/js/extensions/revolution.extension.layeranimation.min.js' %}"></script>
+<script type="text/javascript" src="{% static 'plugins/revo-slider/js/extensions/revolution.extension.migration.min.js' %}"></script>
+<script type="text/javascript" src="{% static 'plugins/revo-slider/js/extensions/revolution.extension.navigation.min.js' %}"></script>
+<script type="text/javascript" src="{% static 'plugins/revo-slider/js/extensions/revolution.extension.parallax.min.js' %}"></script>
+<script type="text/javascript" src="{% static 'plugins/revo-slider/js/extensions/revolution.extension.slideanims.min.js' %}"></script>
+<script type="text/javascript" src="{% static 'plugins/revo-slider/js/extensions/revolution.extension.video.min.js' %}"></script>
+<script>
+    /* https://learn.jquery.com/using-jquery-core/document-ready/ */
+    jQuery(document).ready(function () {
+        /* initialize the slider based on the Slider's ID attribute */
+        jQuery('#rev_slider_1').show().revolution({
+
+            /* options are 'auto', 'fullwidth' or 'fullscreen' */
+            sliderLayout: 'fullscreen',
+
+            /* basic navigation arrows and bullets */
+            navigation: {
+
+                arrows: {
+                    style: "zeus",
+                    enable: true,
+                    hide_onmobile: true,
+                    hide_under: 600,
+                    hide_onleave: true,
+                    hide_delay: 200,
+                    hide_delay_mobile: 1200,
+                    tmp: '<div class="tp-title-wrap">    <div class="tp-arr-imgholder"></div> </div>',
+                    left: {
+                        h_align: "left",
+                        v_align: "center",
+                        h_offset: 30,
+                        v_offset: 0
+                    },
+                    right: {
+                        h_align: "right",
+                        v_align: "center",
+                        h_offset: 30,
+                        v_offset: 0
+                    }
+                }
+                ,
+                bullets: {
+                    enable: false,
+                    hide_onmobile: true,
+                    hide_under: 600,
+                    style: "metis",
+                    hide_onleave: true,
+                    hide_delay: 200,
+                    hide_delay_mobile: 1200,
+                    direction: "horizontal",
+                    h_align: "center",
+                    v_align: "bottom",
+                    h_offset: 0,
+                    v_offset: 30,
+                    space: 5,
+                    tmp: '<span class="tp-bullet-img-wrap">  <span class="tp-bullet-image"></span></span><span class="tp-bullet-title">{{title}}</span>'
+                }
+            }
+        });
+    });
+</script>
+</body>
+</html>
