@@ -91,11 +91,14 @@ Welcome Slider
 					<h3>Your number one  mp3 downloader</h3>
 					<p>Start typing a few characters on the search bar to get search suggestions. </p>
 					<ul class="list-inline wow fadeInUp" data-wow-duration=".5s" data-wow-delay=".7s">
+						<form action="{% url 'result' %}" method="GET">
 						<li class="list-inline-item">
-							<input type="text" placeholder="Enter your search item..." class="search-input">		
+							<input type="text" placeholder="Enter your search item..." class="search-input" name="search_item">		
 						</li>
 						<li class="list-inline-item">
-							<a href="https://ngomanet.com/" target="_blank" class="btn btn-main">Search</a>		
+							
+							<input type="submit"  class="btn btn-main" name="search_button"  >{{videoTitle}}</a>	
+						</form>	
 						</li>
 					</ul>
 				</div>
@@ -121,7 +124,7 @@ Start About Section
 					<span style="color: #fe2a77; ">3 Months Ago | 12k Likes | 1M views </span>
 					<p>Lorem ipsum dolor sit amet, consectetur.. Sed id lorem eget orci dictum facilisis vel id tellus. Nullam iaculis arcu at mauris dapibus consectetur.</p>
 					<div id="cf-submit" >
-						<input type="submit" id="contact-submit" class="btn btn-main" value="Download">
+						<input type="submit" id="contact-submit " class="btn btn-main" value="Download" >
 						<input type="submit" id="contact-submit" class="btn btn-main " value="Play">
 					</div>
 				</div>
@@ -129,6 +132,12 @@ Start About Section
 			<!-- End Single Service Item -->
 			
 			<!-- Single Service Item -->
+
+
+			<!-- 
+				Use this as the blueprint for all the music items
+
+			 -->
 			<div class="col-md-4 col-sm-6" >
 				<div class="service-block text-left">
 					<div class="service-icon text-left">
@@ -138,8 +147,8 @@ Start About Section
 					<span style="color: #fe2a77; ">3 Months Ago | 12k Likes | 1M views </span>
 					<p>Lorem ipsum dolor sit amet, consectetur.. Sed id lorem eget orci dictum facilisis vel id tellus. Nullam iaculis arcu at mauris dapibus consectetur.</p>
 					<div id="cf-submit" >
-						<input type="submit" id="contact-submit" class="btn btn-main" value="Download">
-						<input type="submit" id="contact-submit" class="btn btn-main " value="Play">
+						<a href="download/?name=videoId" id="contact-submit" class="btn btn-main" value="Download" name=" videoId comes here">DOWNLOAD</a>
+						<a href="stream/?name=videoId" type="submit" id="contact-submit" class="btn btn-main " value="Play" name=" video id comes here">PLAY</a>
 					</div>
 					
 				</div>
