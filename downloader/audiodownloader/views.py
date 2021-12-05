@@ -9,7 +9,7 @@ def index(request):
 
 # keyword = "Bahati and Diana"
 def result(request): 
-    api_key="AIzaSyC38udAOc03YcEXO41SwnqxPJEjpaxudio"
+    api_key="AIzaSyARvC4uGPwaxjOpQ2hc9VhYZ1Md2e82eZg"
     
     if request.GET:
         keyword = request.GET.get('search_item')
@@ -18,9 +18,9 @@ def result(request):
         youtube = build('youtube','v3',developerKey = api_key)
         print(type(youtube))
 
-        request = youtube.search().list(q=keyword,part='snippet',type='video')
-        print(type(request))
-        res = request.execute()
+        youtube = youtube.search().list(q=keyword,part='snippet',type='video')
+        print(type(youtube))
+        res = youtube.execute()
         
         for item in res['items']:
             # print(res['items'])
@@ -38,14 +38,14 @@ def result(request):
             bestaudiodownload = video.getbestaudio()
             print(type(video))
 
-            details = {video.title:{"videoTitle":video.title,"fileSize":file_size,"videoUrl":videoUrl,"videoAuthor":video.author,"likes":video.likes,"duration":video.duration,"bestQuality":bestaudiodownload}}
+            details = {"description":video.description,"viewcount": video.viewcount,"videoTitle":video.title,"fileSize":file_size,"videoID":videoId,"videoUrl":videoUrl,"videoAuthor":video.author,"likes":video.likes,"duration":video.duration,"bestQuality":bestaudiodownload}
             context.update(details)
             print(context)
 
         # return video.title,videoUrl,video.author,video.duration,video.viewcount,video.likes,bestaudiodownload
     print(context)
-    # return render(request,'index.html')
-    return HttpResponse(context)
+    return render(request,"index.html", context)
+    # return HttpResponse(context)
 
 def download(request):
     videoId = request.GET.get('videoId')

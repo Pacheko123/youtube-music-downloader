@@ -42,7 +42,7 @@ Fixed Navigation
                 <nav class="navbar navbar-expand-lg">
                     <a class="navbar-brand" href="{% url 'index' %}">
                         <!-- <img src="images/logo.png" alt="logo"> -->
-						<h3>NGOMANET</h3>
+						<h3>SONGCITY.</h3>
                     </a>
                     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navigation" aria-controls="navigation"
                         aria-expanded="false" aria-label="Toggle navigation">
@@ -52,7 +52,7 @@ Fixed Navigation
                         <ul class="navbar-nav ml-auto">
                            
                             <li class="nav-item">
-                                <a class="nav-link" href="about.html">Contact</a>
+                                <a class="nav-link" href="#footer">Contact</a>
                             </li>
                             <li class="nav-item">
                                 <a class="nav-link" href="service.html">Copyright</a>
@@ -88,18 +88,27 @@ Welcome Slider
 			</div>
 			<div class="col-lg-6">
 				<div class="block">
-					<h3>Your number one  mp3 downloader</h3>
-					<p>Start typing a few characters on the search bar to get search suggestions. </p>
+					<h3>Download and stream music audios and videos for free</h3>
+					<p>Start typing a few characters on the search bar to get suggestions of music items. </p>
 					<ul class="list-inline wow fadeInUp" data-wow-duration=".5s" data-wow-delay=".7s">
 						<form action="{% url 'result' %}" method="GET">
 						<li class="list-inline-item">
-							<input type="text" placeholder="Enter your search item..." class="search-input" name="search_item">		
+							<input type="text" placeholder="Enter a music keyword..." class="search-input" name="search_item">		
 						</li>
 						<li class="list-inline-item">
 							
-							<input type="submit"  class="btn btn-main" name="search_button"  >{{videoTitle}}</a>	
-						</form>	
+							<input type="submit" value="SEARCH" class="btn-search" name="search_button" style="border: none;background-image: linear-gradient(100deg, #f9643d, #fe2a77);color: #fff;
+							display: inline-block;
+							font-size: 14px;
+							letter-spacing: 1px;
+							padding: 10px 20px;
+							text-transform: uppercase;
+							border: 1px solid transparent;
+							border-radius: 2px;
+							cursor: pointer;">{{videoUrl}}</a>	
+						
 						</li>
+					</form>	
 					</ul>
 				</div>
 			</div>
@@ -114,62 +123,36 @@ Start About Section
 <section class="services section-xs" id="services">
 	<div class="container">
 		<div class="row">
-			<!-- Single Service Item -->
-			<div class="col-md-4 col-sm-6" >
-				<div class="service-block color-bg text-left">
-					<div class="service-icon text-left">
-						<!-- <i class="tf-ion-ios-copy-outline"></i> -->
-					</div>
-					<h3>Nataka Kulewa by Diamond Platnumz</h3>
-					<span style="color: #fe2a77; ">3 Months Ago | 12k Likes | 1M views </span>
-					<p>Lorem ipsum dolor sit amet, consectetur.. Sed id lorem eget orci dictum facilisis vel id tellus. Nullam iaculis arcu at mauris dapibus consectetur.</p>
-					<div id="cf-submit" >
-						<input type="submit" id="contact-submit " class="btn btn-main" value="Download" >
-						<input type="submit" id="contact-submit" class="btn btn-main " value="Play">
-					</div>
-				</div>
-			</div>
-			<!-- End Single Service Item -->
+		
 			
 			<!-- Single Service Item -->
-
-
 			<!-- 
-				Use this as the blueprint for all the music items
+				This Is the blueprint for all the music items
 
 			 -->
+			 {% for i in details.items %}
+			 {% for j in i.items %}
 			<div class="col-md-4 col-sm-6" >
 				<div class="service-block text-left">
 					<div class="service-icon text-left">
 						<!-- <i class="tf-ion-ios-alarm-outline"></i> -->
 					</div>
-					<h3>On the low by Burna Boy</h3>
-					<span style="color: #fe2a77; ">3 Months Ago | 12k Likes | 1M views </span>
-					<p>Lorem ipsum dolor sit amet, consectetur.. Sed id lorem eget orci dictum facilisis vel id tellus. Nullam iaculis arcu at mauris dapibus consectetur.</p>
+					<h3>{{videoTitle}}</h3>
+					<span style="color: #fe2a77; ">3 Months Ago | {{likes}} Likes | {{viewcount}} views </span>
+					<p>{{description}}.</p>
 					<div id="cf-submit" >
-						<a href="download/?name=videoId" id="contact-submit" class="btn btn-main" value="Download" name=" videoId comes here">DOWNLOAD</a>
+						<a href="download/?name="+{{videoId} id="contact-submit" class="btn btn-main" value="Download" name=" videoId comes here">DOWNLOAD</a>
 						<a href="stream/?name=videoId" type="submit" id="contact-submit" class="btn btn-main " value="Play" name=" video id comes here">PLAY</a>
 					</div>
 					
 				</div>
 			</div>
+
+			{% endfor %}
+			{% endfor %}
 			<!-- End Single Service Item -->
 			
-			<!-- Single Service Item -->
-			<div class="col-md-4 col-sm-6 mx-auto"  >
-				<div class="service-block color-bg text-left">
-					<div class="service-icon text-left">
-						<!-- <i class="tf-ion-ios-book-outline"></i> -->
-					</div>
-					<h3>Mazishi by Khaligraph Jones</h3>
-					<span style="color: #fe2a77; ">3 Months Ago | 12k Likes | 1M views </span>
-					<p>Lorem ipsum dolor sit amet, consectetur.. Sed id lorem eget orci dictum facilisis vel id tellus. Nullam iaculis arcu at mauris dapibus consectetur.</p>
-					<div id="cf-submit" >
-						<input type="submit" id="contact-submit" class="btn btn-main" value="Download">
-						<input type="submit" id="contact-submit" class="btn btn-main " value="Play">
-					</div>
-				</div>
-			</div>
+		
 		</div> 		<!-- End row -->
 	</div>   	<!-- End container -->
 </section>   <!-- End section -->
@@ -200,7 +183,7 @@ Start About Section
 					<div class="member-content">
 						<h3>Patrick Oluoch</h3>
 						<span>Backend Engineer | UI/UX Designer</span>
-						<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur necessitatibus ullam, culpa odio.</p>
+						<p>Patrick Oluoch is the project owner of SONGCITY. working as both frontend and backend engineer of the project.</p>
 						<ul class="list-inline">
 							<li class="list-inline-item">
 								<a href="#">
@@ -214,12 +197,12 @@ Start About Section
 							</li>
 							<li class="list-inline-item">
 								<a href="#">
-									<i class="tf-ion-social-google-outline"></i>
+									<i class="tf-ion-social-whatsapp-outline"></i>
 								</a>
 							</li>
 							<li class="list-inline-item">
-								<a href="https://dribbble.com/pacheko">
-									<i class="tf-ion-social-dribbble"></i>
+								<a href="https://github.com/pacheko123">
+									<i class="tf-ion-social-github"></i>
 								</a>
 							</li>
 						</ul>
@@ -348,17 +331,19 @@ Start About Section
       <div class="row">
         <div class="col-sm-6 mb-4 mb-lg-0 col-md-6">
           <h3>About</h3>
-          <p>Integer posuere erat a ante venenati dapibus posuere velit aliquet. Fusce dapibus, tellus cursus commodo, tortor mauris sed posuere.</p>
+          <p>SONGCITY provides a free platform to download and stream music audios and videos. The project is open for contributions . Please leave Your
+			  suggestion or contribution request in the contact form and we will get back to you as soon as possible
+		  </p>
         </div>
         
 
         <div class="col-sm-6 mb-4 mb-lg-0 col-md-6">
           <h3>Quick Links</h3>
           <ul>
-            <li><a href="#">Partners</a></li>
+            <!-- <li><a href="#">Partners</a></li> -->
             <li><a href="#">About</a></li>
             <li><a href="#">FAQ’s</a></li>
-            <li><a href="#">Badges</a></li>
+            <!-- <li><a href="#">Badges</a></li> -->
           </ul>
         </div>
        
